@@ -8,6 +8,7 @@ describe('LogicBundle: TaskManagement', () => {
       assert.deepEqual(
         reducer(
           {
+            generatedId: 0,
             numOfProject: 0,
             projects: {
               [TODO]: []
@@ -16,9 +17,10 @@ describe('LogicBundle: TaskManagement', () => {
           addProject('Project 1')
         ),
         {
+          generatedId: 1,
           numOfProject: 1,
           projects: {
-            [TODO]: ['Project 1']
+            [TODO]: [{ id: 1, name: 'Project 1' }]
           }
         }
       );
@@ -28,17 +30,28 @@ describe('LogicBundle: TaskManagement', () => {
       assert.deepEqual(
         reducer(
           {
+            generatedId: 3,
             numOfProject: 3,
             projects: {
-              [TODO]: ['Project 1', 'Project 2', 'Project 3']
+              [TODO]: [
+                { id: 1, name: 'Project 1' },
+                { id: 2, name: 'Project 2' },
+                { id: 3, name: 'Project 3' }
+              ]
             }
           },
           addProject('Project 4')
         ),
         {
+          generatedId: 4,
           numOfProject: 4,
           projects: {
-            [TODO]: ['Project 1', 'Project 2', 'Project 3', 'Project 4']
+            [TODO]: [
+              { id: 1, name: 'Project 1' },
+              { id: 2, name: 'Project 2' },
+              { id: 3, name: 'Project 3' },
+              { id: 4, name: 'Project 4' }
+            ]
           }
         }
       );

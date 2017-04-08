@@ -3,6 +3,8 @@ import React from 'react';
 import { compose } from 'recompose';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { DragDropContext } from 'react-dnd';
+import HTML5Backend from 'react-dnd-html5-backend';
 import AddProject from './AddProject';
 import ProjectStats from './ProjectStats';
 import { selectors, addProject, moveProject } from './logicBundle';
@@ -17,7 +19,7 @@ export const TaskManagement = (
     actions
   }: {
     numOfProject: number,
-    projects: { [key: string]: string[] },
+    projects: { [key: string]: Array<{ id: number, name: string }> },
     actions: { addProject: Function, moveProject: Function } // eslint-disable-line
   }
 ) => (
@@ -43,6 +45,7 @@ export const TaskManagement = (
 );
 
 export const enhance = compose(
+  DragDropContext(HTML5Backend),
   connect(
     state => ({
       numOfProject: selectors.getNumOfProject(state),

@@ -1,15 +1,16 @@
+import _ from 'lodash';
 import React from 'react';
 import { assert } from 'chai';
 import { shallow } from 'enzyme';
-import Column, { __RewireAPI__ as Module } from '../Column';
+import { __RewireAPI__ as Module, Column } from '../Column';
 import mockingComponent from '../../../helpers/createMockingComponent';
 
 describe('Component: Column', () => {
   const data = [
-    'Project 1',
-    'Project 2',
-    'Project 3',
-    'Project 4'
+    { id: 1, name: 'Project 1' },
+    { id: 2, name: 'Project 2' },
+    { id: 3, name: 'Project 3' },
+    { id: 4, name: 'Project 4' }
   ];
   const Row = mockingComponent('Row');
   let component;
@@ -23,7 +24,9 @@ describe('Component: Column', () => {
   });
 
   beforeEach(() => {
-    component = shallow(<Column tag="Todo" rowsData={data} />);
+    component = shallow(
+      <Column connectDropTarget={_.identity} tag="Todo" rowsData={data} />
+    );
   });
 
   it('should render title', () => {

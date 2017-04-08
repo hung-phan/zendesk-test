@@ -1,6 +1,6 @@
 {
-  "name": "koa-react-isomorphic",
-  "version": "4.0.1",
+  "name": "task-management",
+  "version": "1.0.0",
   "dependencies": {
     "babel-core": "^6.24.0",
     "babel-eslint": "^7.2.1",
@@ -77,6 +77,8 @@
     "react": "^15.4.2",
     "react-addons-update": "^15.5.1",
     "react-async-component": "^1.0.0-alpha.1",
+    "react-dnd": "^2.3.0",
+    "react-dnd-html5-backend": "^2.3.0",
     "react-dom": "^15.4.2",
     "react-helmet": "^5.0.2",
     "react-redux": "^5.0.3",

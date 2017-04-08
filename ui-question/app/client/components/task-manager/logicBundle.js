@@ -22,13 +22,16 @@ export const selectors = globalizeSelectors(
 
 export default handleActions(
   {
-    [ADD_PROJECT]: (state, { payload: projectName }) => update(state, {
+    [ADD_PROJECT]: (state, { payload: name }) => update(state, {
+      generatedId: {
+        $set: state.generatedId + 1
+      },
       numOfProject: {
         $set: state.numOfProject + 1
       },
       projects: {
         [TODO]: {
-          $push: [projectName]
+          $push: [{ id: state.generatedId + 1, name }]
         }
       }
     }),
@@ -61,6 +64,7 @@ export default handleActions(
     }
   },
   {
+    generatedId: 0,
     numOfProject: 0,
     projects: TAGS.reduce(
       (obj: Object, tag: string) => {
