@@ -7,7 +7,17 @@ Using my personal project [boilerplate](https://github.com/hung-phan/koa-react-i
 ## Requirement
 - Install [yarn](https://github.com/yarnpkg/yarn)
 
-## Run project in development mode
+## To run application
+
+```bash
+$ docker-compose up
+```
+
+And access `http://localhost:3000` to see the application
+
+## Run in other modes
+
+### Development mode
 
 ```bash
 $ yarn install
@@ -15,18 +25,10 @@ $ yarn run watch
 $ yarn run dev
 ```
 
-## Run project in production mode
+### Production mode
 
 ```bash
 $ yarn install
 $ yarn run build
 $ SECRET_KEY=your_env_key yarn start
 ```
-
-### Docker container
-
-```bash
-$ docker-compose up
-```
-
-Access `http://localhost:3000` to see the application
