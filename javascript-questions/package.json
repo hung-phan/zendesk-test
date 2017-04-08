@@ -2,7 +2,6 @@
   "name": "javascript-questions",
   "version": "1.0.0",
   "description": "Javascript centric question",
-  "main": "index.js",
   "scripts": {
     "test": "mocha --watch --opts mocha.opts"
   },
