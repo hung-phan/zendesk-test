@@ -2,7 +2,6 @@
 /* eslint-disable react/no-find-dom-node */
 import React from 'react';
 import { DropTarget } from 'react-dnd';
-import { findDOMNode } from 'react-dom';
 import ProjectStats from './ProjectStats';
 import Row from './Row';
 import style from './style.scss';
@@ -43,7 +42,7 @@ export class Column extends React.Component {
 export const enhance = DropTarget(
   'Row',
   {
-    hover(props, monitor, component) {
+    hover(props, monitor) {
       const item = monitor.getItem();
 
       if (item.tag !== props.tag) {
