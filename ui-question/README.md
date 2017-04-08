@@ -6,6 +6,7 @@ Using my personal project [boilerplate](https://github.com/hung-phan/koa-react-i
 
 ## Requirement
 - Install [yarn](https://github.com/yarnpkg/yarn)
+- Install docker and docker-compose [link](https://docs.docker.com/docker-for-mac/)
 
 ## To run application
 
