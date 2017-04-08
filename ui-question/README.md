@@ -1,5 +1,7 @@
 # UI Centric question
 
+![alt text](https://raw.githubusercontent.com/hung-phan/zendesk-test/master/ui-question/screenshot.gif "application screenshot")
+
 Using my personal project [boilerplate](https://github.com/hung-phan/koa-react-isomorphic)
 
 ## Requirement
