@@ -29,6 +29,7 @@ $ ./node_modules/.bin/babel-node
 In the javascript REPL, enter the following:
 
 ```javascript
+// string compression
 > const stringCompression = require("./src/stringCompression").default;
 
 > console.log(stringCompression("aaaabbaaaababbbcccccccccccc"));
@@ -37,6 +38,7 @@ a4b2a4b1a1b3c12
 > console.log(stringCompression("aabcccccaaa"));
 a2b1c5a3
 
+// uri comparision
 > const checkURIs = require("./src/checkURIs").default;
 
 > console.log(checkURIs("http://abc.com:80/~smith/home.html", "http://ABC.com/%7Esmith/home.html"));
