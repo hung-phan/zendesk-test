@@ -4,7 +4,7 @@ import style from './style.scss';
 
 export default class AddProject extends React.PureComponent {
   state: { input: string } = {
-    input: '',
+    input: ''
   };
 
   onChange = (e: Object) => this.setState({ input: e.target.value });
@@ -25,7 +25,7 @@ export default class AddProject extends React.PureComponent {
       <div className={style.AddProject}>
         <h4>add project</h4>
         <input
-          type="text"
+          type='text'
           onKeyUp={this.onKeyUp}
           onChange={this.onChange}
           value={this.state.input}
