@@ -4,6 +4,8 @@
 
 Using my personal project [boilerplate](https://github.com/hung-phan/koa-react-isomorphic)
 
+Main work is in [task-manager folder](https://github.com/hung-phan/zendesk-test/blob/master/ui-question/app/client/components/task-manager/index.jsx)
+
 ## Requirement
 - Install [yarn](https://github.com/yarnpkg/yarn)
 - Install docker and docker-compose [link](https://docs.docker.com/docker-for-mac/)
